@@ -1,0 +1,15 @@
+#include <stdio.h>
+int main() {
+	char a[51];
+	int i, cnt = 0, result = 0;
+	scanf("%s", a);
+	
+	for(i=0;a[i]!='\0';i++)
+		if(a[i] >= '0' && a[i] <= '9') result = result * 10 + (a[i] - '0');
+	
+	for(i=1;i<=result;i++)
+		if(result % i == 0) cnt++;
+	
+	printf("%d\n%d", result, cnt);
+	return 0;
+}
